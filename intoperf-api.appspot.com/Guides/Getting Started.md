@@ -3,7 +3,7 @@
 
 ### Before you begin
 
-Make sure you have an **IntoPerf API key**. If you don't or you get authentication errors when using it please contact admin@intoperf.com
+Make sure you have your unique **IntoPerf API key**. If you don't or you get authentication errors when using it please contact admin@intoperf.com
 
 ### Using the API
 
