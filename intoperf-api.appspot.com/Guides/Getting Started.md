@@ -170,6 +170,6 @@ Response:
     key=YOUR_API_KEY
     ```
 
-That’s it! The `Average speed` data you just uploaded can be analyzed now in both Data Navigator and Reports.
+That’s it! The `Submaximal speed portion` data you just uploaded can be analyzed now in both Data Navigator and Reports.
 
 **Note:** IntoPerf Data Navigator and Reports would do player's performance assessment only if there are at least 3 matches imported for that player. Otherwise that player would not even be listed in select boxes.
