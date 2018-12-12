@@ -76,12 +76,6 @@ Response:
     eventTimestampMillis=1542670020000
     key=YOUR_API_KEY
     ```
-    
-    Response:
-    
-    ```
-    success
-    ```
 
     ... Report more events ...
 
@@ -95,12 +89,6 @@ Response:
     playerOutTimestampMillis=1542670404250
     key=YOUR_API_KEY
     ```
-
-    Response:
-    
-    ```
-    success
-    ```
     
     Make ```POST /v1/matches/m24/player_in``` request with:
     
@@ -112,27 +100,6 @@ Response:
     key=YOUR_API_KEY
     
     ```
-
-    Response:
-    
-    ```
-    success
-    ```
-
-1.  You can still push more data for the player who subbed out, the only restriction is ```eventMillis<1542670404250```.
-
-    Make ```POST /v1/matches/m24/perfevents``` request with:
-    
-    ```
-    eventTypeId=13
-    matchId=m24
-    playerId=7206
-    value=0.63
-    eventTimestampMillis=1542670400000
-    key=YOUR_API_KEY
-    ```
-
-    …
 
 1.  Finish the first half (and start the break after the first half).
     
