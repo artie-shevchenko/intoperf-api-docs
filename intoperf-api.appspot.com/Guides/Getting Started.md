@@ -16,7 +16,7 @@ The sample below is a good overview of the API. Also browse the reference sectio
 
 ## Sample
 
-Let’s import a match with ```Submaximal speed portion``` data for a team with ```ID=149``` (see ```GET /v1/teams``` response to find the correct team ID).
+Let’s import to [https://apidemo.intoperf.com](https://apidemo.intoperf.com) a match with ```Submaximal speed portion``` data for a team with ```ID=149``` (see ```GET /v1/teams``` response to find the correct team ID).
 
 **[Prework]** Use ```GET /v1/players``` and ```GET /v1/eventtypes``` responses to create a mapping between IntoPerf and third-party IDs.
 
