@@ -28,7 +28,7 @@ Response:
 
 ```
 [
-{
+  {
     "id": 12,
     "name": "Shot",
     "description": "Shots accuracy.",
