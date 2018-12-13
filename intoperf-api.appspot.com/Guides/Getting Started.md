@@ -20,7 +20,7 @@ Let’s import a match between FK Krasnodar and CSKA (2012/06/26) with ```Submax
 
 **Note:** 
 
-**[Prework]** Use ```GET /v1/players``` and ```GET /v1/eventtypes``` responses to create a map between IntoPerf and your IDs.
+**[Prework]** Use [```GET /v1/players```](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/players/get) and ```GET /v1/eventtypes``` responses to create a map between IntoPerf and your IDs.
 
 **[Prework]** Make ```GET /v1/eventtypes``` request and remember ```reportPeriodMillis``` for every periodic event type used (in this example it's 10000 milliseconds for ```Submaximal speed portion```):
 
