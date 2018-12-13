@@ -8,7 +8,7 @@ Make sure you have your unique **IntoPerf API key**. If you don't or you get aut
 ## Using the API
 
 * Don't use HTTP, use HTTPS instead.
-* Each request to IntoPerf API should have a ```key``` parameter. For example: ```https://api.intoperf.com/players?key=YOUR_API_KEY```
+* Each request to IntoPerf API should have a ```key``` parameter. For example: ```https://api.intoperf.com/v1/players?key=YOUR_API_KEY```
 
 The sample below is a good overview of the API. To find more examples of what you can do with this API and how to use it, visit the reference section of this site. You can use the **Try this API** tool on the right side of every API method page to generate a sample request.
 
@@ -16,9 +16,7 @@ The sample below is a good overview of the API. To find more examples of what yo
 
 ## Sample
 
-TODO: be more specific which game it is.
-
-Let’s import a match between FK Krasnodar and CSKA (2012/06/26) with ```Submaximal speed portion``` data for FK Krasnodar (see ```GET /v1/teams``` response to find team IDs).
+Let’s import a match between FK Krasnodar and CSKA (2012/06/26) with ```Submaximal speed portion``` data for FK Krasnodar (see ```GET /v1/teams``` response to find correct team IDs).
 
 **Note:** 
 
