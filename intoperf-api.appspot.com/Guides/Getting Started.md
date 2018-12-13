@@ -43,7 +43,7 @@ Response:
 ]
 ```
 
-1.  Start a match.
+1.  **Start a match.**
 
     Make [POST /v1/matches](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/post) request with:
 
@@ -64,7 +64,7 @@ Response:
     m24
     ```
 
-1. Push a `Submaximal speed portion` value for the first complete aligned 10-second period [1340670020000, 1542670030000).
+1.  **Push a performance event**. Push a `Submaximal speed portion` value for the first complete aligned 10-second period [1340670020000, 1542670030000).
 
     Make [POST /v1/matches/m24/perfevents](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/perfevents/post) request with:
 
@@ -79,7 +79,7 @@ Response:
 
     ... Push more events ...
 
-1. Push a substitution.
+1.  **Push a substitution.**
 
     Make [POST /v1/matches/m24/player_out](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:player_out/post) request with:
     
@@ -101,7 +101,7 @@ Response:
     
     ```
 
-1.  Finish the first half (and start the break after the first half).
+1.  **Finish the first half** (and start the break after the first half).
     
     Make [POST /v1/matches/m24:start_next_period](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:start_next_period/post) request with:
     
@@ -114,7 +114,7 @@ Response:
     
     ...
     
-1.  Start the second half (and finish the break after the first half).
+1.  **Start the second half** (and finish the break after the first half).
 
     Make [POST /v1/matches/m24:start_next_period](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:start_next_period/post) request with:
     
@@ -127,7 +127,7 @@ Response:
     
     ...
     
-1.  Finish the match.
+1.  **Finish the match.**
 
     Make [POST /v1/matches/m24:finish](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:finish/post) request with:
     
