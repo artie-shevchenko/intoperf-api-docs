@@ -18,8 +18,6 @@ The sample below is a good overview of the API. To find more examples of what yo
 
 Let’s import a match between FK Krasnodar and CSKA (2012/06/26) with ```Submaximal speed portion``` data for FK Krasnodar (see [GET /v1/teams](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/teams/get) response to find the correct team IDs).
 
-**Note:** 
-
 **[Prework]** Use [GET /v1/players](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/players/get) and [GET /v1/eventtypes](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/eventtypes/get) responses to create a map between IntoPerf and your IDs.
 
 **[Prework]** Make [GET /v1/eventtypes](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/eventtypes/get) request and remember ```reportPeriodMillis``` for every periodic event type used (in this example it's 10000 milliseconds for ```Submaximal speed portion```):
