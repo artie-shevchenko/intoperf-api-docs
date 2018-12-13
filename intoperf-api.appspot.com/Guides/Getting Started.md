@@ -16,7 +16,7 @@ The sample below is a good overview of the API. To find more examples of what yo
 
 ## Sample
 
-Let’s import a match between FK Krasnodar and CSKA (2012/06/26) with ```Submaximal speed portion``` data for FK Krasnodar (see ```GET /v1/teams``` response to find the correct team IDs).
+Let’s import a match between FK Krasnodar and CSKA (2012/06/26) with ```Submaximal speed portion``` data for FK Krasnodar (see [GET /v1/teams](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/teams/get) response to find the correct team IDs).
 
 **Note:** 
 
