@@ -96,7 +96,7 @@ Response:
 
     ```
     eventTypeId=13
-    playerId=156
+    playerId=163
     value=0.21
     eventTimestampMillis=1371945620000
     key=YOUR_API_KEY
