@@ -20,7 +20,7 @@ Let’s import a match between FK Krasnodar and CSKA (2012/06/26) with ```Submax
 
 **Note:** You can use the **Try this API** tool on the right side of API reference pages or one of well-known tools such as curl, wget, or [Postman](https://www.getpostman.com/apps).
 
-**[Prework]** Use [GET /v1/players](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/players/get) and [GET /v1/eventtypes](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/eventtypes/get) responses to create a map between IntoPerf and your IDs.
+**[Prework]** Use [GET /v1/players](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/players/get) and [GET /v1/eventtypes](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/eventtypes/get) responses to create a map between IntoPerf IDs and your IDs.
 
 **[Prework]** Make [GET /v1/eventtypes](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/eventtypes/get) request and remember ```reportPeriodMillis``` for every periodic event type used (in this example it's 10000 milliseconds for ```Submaximal speed portion```):
 
