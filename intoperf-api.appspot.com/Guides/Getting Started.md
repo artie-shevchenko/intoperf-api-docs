@@ -16,7 +16,7 @@ The sample below is a good overview of the API. To find more examples of what yo
 
 ## Sample
 
-Let’s import a match between FK Krasnodar and CSKA (2012/06/26) with ```Submaximal speed portion``` data for FK Krasnodar (see [GET /v1/teams](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/teams/get) response to find the correct team IDs).
+Let’s import a match between CSKA Moscow and FK Krasnodar (2013/06/23) with ```Submaximal speed portion``` data for FK Krasnodar (see [GET /v1/teams](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/teams/get) response to find the correct team IDs).
 
 **Note:** to see pushed data at [https://apidemo.intoperf.com](https://apidemo.intoperf.com) don't use **Try this API** tool. Instead use curl, wget, [Postman](https://www.getpostman.com/apps) or any similar tool with your unique **IntoPerf API key**.
 
@@ -52,7 +52,7 @@ Response:
     ```
     localTeamId=65
     visitingTeamId=149
-    startTimestampMillis=1340670001000
+    startTimestampMillis=1371945601000
     timezoneUtcOffsetHours=3
     visitingTeamLineup=156,153,174,163,159,165,168,172,175,176
     visitingTeamLineupShirtNumbers=17,5,3,7,19,4,2,9,11,10
@@ -66,15 +66,39 @@ Response:
     m24
     ```
 
-1.  **Push a performance event**. Push a `Submaximal speed portion` value for the first complete aligned 10-second period [1340670020000, 1542670030000).
+1.  **Push several performance events**. Push `Submaximal speed portion` values for the first complete aligned 10-second period [1371945620000, 1371945610000) for several players.
 
-    Make [POST /v1/matches/m24/perfevents](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/perfevents/post) request with:
+    Make [POST /v1/matches/m24/perfevents](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/perfevents/post) requests with:
 
     ```
     eventTypeId=13
     playerId=156
     value=0.24
-    eventTimestampMillis=1542670030000
+    eventTimestampMillis=1371945620000
+    key=YOUR_API_KEY
+    ```
+    
+    ```
+    eventTypeId=13
+    playerId=153
+    value=0.42
+    eventTimestampMillis=1371945620000
+    key=YOUR_API_KEY
+    ```
+    
+    ```
+    eventTypeId=13
+    playerId=174
+    value=0.27
+    eventTimestampMillis=1371945620000
+    key=YOUR_API_KEY
+    ```
+
+    ```
+    eventTypeId=13
+    playerId=156
+    value=0.21
+    eventTimestampMillis=1371945620000
     key=YOUR_API_KEY
     ```
 
@@ -86,7 +110,7 @@ Response:
     
     ```
     playerId=156
-    playerOutTimestampMillis=1542671034250
+    playerOutTimestampMillis=1371947400000
     key=YOUR_API_KEY
     ```
     
@@ -94,7 +118,7 @@ Response:
     
     ```
     playerId=178
-    playerInTimestampMillis=1542671034250
+    playerInTimestampMillis=1371947400000
     shirtNumber=10
     key=YOUR_API_KEY
     
@@ -106,7 +130,7 @@ Response:
     
     ```
     nextPeriodCode=break-after-first
-    periodStartTimestampMillis=1542673030000
+    periodStartTimestampMillis=1371948420000
     key=YOUR_API_KEY
     ```
     
@@ -118,7 +142,7 @@ Response:
     
     ```
     nextPeriodCode=second
-    periodStartTimestampMillis=1542674000000
+    periodStartTimestampMillis=1371949260000
     key=YOUR_API_KEY
     ```
     
@@ -129,7 +153,7 @@ Response:
     Make [POST /v1/matches/m24:finish](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:finish/post) request with:
     
     ```
-    finishTimestampMillis=1542677000000
+    finishTimestampMillis=1371952200000
     key=YOUR_API_KEY
     ```
 
