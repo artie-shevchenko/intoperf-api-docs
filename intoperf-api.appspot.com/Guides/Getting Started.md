@@ -60,7 +60,7 @@ Response:
     key=YOUR_API_KEY
     ```
     
-    Response (it will be a different value for you, **you will need it later on**):
+    Response (it may be a different value for you, **you will need it later on**):
     
     ```
     m24
@@ -72,7 +72,6 @@ Response:
 
     ```
     eventTypeId=13
-    matchId=m24
     playerId=156
     value=0.24
     eventTimestampMillis=1542670030000
@@ -86,7 +85,6 @@ Response:
     Make [POST /v1/matches/m24/player_out](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:player_out/post) request with:
     
     ```
-    matchId=m24
     playerId=156
     playerOutTimestampMillis=1542671034250
     key=YOUR_API_KEY
@@ -95,7 +93,6 @@ Response:
     Make [POST /v1/matches/m24/player_in](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:player_in/post) request with:
     
     ```
-    matchId=m24
     playerId=178
     playerInTimestampMillis=1542671034250
     shirtNumber=10
@@ -108,7 +105,6 @@ Response:
     Make [POST /v1/matches/m24:start_next_period](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:start_next_period/post) request with:
     
     ```
-    matchId=m24
     nextPeriodCode=break-after-first
     periodStartTimestampMillis=1542673030000
     key=YOUR_API_KEY
@@ -121,7 +117,6 @@ Response:
     Make [POST /v1/matches/m24:start_next_period](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:start_next_period/post) request with:
     
     ```
-    matchId=m24
     nextPeriodCode=second
     periodStartTimestampMillis=1542674000000
     key=YOUR_API_KEY
@@ -134,7 +129,6 @@ Response:
     Make [POST /v1/matches/m24:finish](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:finish/post) request with:
     
     ```
-    matchId=m24
     finishTimestampMillis=1542677000000
     key=YOUR_API_KEY
     ```
