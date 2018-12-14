@@ -174,6 +174,15 @@ Response:
     key=YOUR_API_KEY
     ```
 
-That’s it! The data you just uploaded can be analyzed now at [https://apidemo.intoperf.com](https://apidemo.intoperf.com) - just search for `Submaximal speed portion` data in CSKA Moscow-FK Krasnodar (2013-06-23) match.
+That’s it! The data you just uploaded can be analyzed now at [https://apidemo.intoperf.com](https://apidemo.intoperf.com):
 
-**Note:** For other teams/players you would need to upload 3 matches first for data to show up at [https://apidemo.intoperf.com](https://apidemo.intoperf.com).
+1.  Go to [https://apidemo.intoperf.com](https://apidemo.intoperf.com).
+1.  Choose `Team in match` context type.
+1.  Choose CSKA Moscow-FK Krasnodar (2013-06-23) match.
+1.  [Optional] Select "1st half" as a period.
+1.  Click `Search`.
+1.  Click `Search with no filters`.
+
+That's a tiny amount of data we just uploaded so confidence level would be ~0%. Next step is to upload data for 10 matches and take a look how IntoPerf's intelligence helps you organize and understand your data.
+
+**Note:** For other teams/players you would need to upload at least 3 matches first for data to show up at [https://apidemo.intoperf.com](https://apidemo.intoperf.com).
