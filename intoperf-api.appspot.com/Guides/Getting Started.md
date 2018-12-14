@@ -18,7 +18,7 @@ The sample below is a good overview of the API. To find more examples of what yo
 
 Let’s import a match between FK Krasnodar and CSKA (2012/06/26) with ```Submaximal speed portion``` data for FK Krasnodar (see [GET /v1/teams](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/teams/get) response to find the correct team IDs).
 
-**Note:** to see pushed data at [https://apidemo.intoperf.com](https://apidemo.intoperf.com) don't use **Try this API** tool. Instead use curl, wget, or [Postman](https://www.getpostman.com/apps) or any similar tool with your unique **IntoPerf API key**.
+**Note:** to see pushed data at [https://apidemo.intoperf.com](https://apidemo.intoperf.com) don't use **Try this API** tool. Instead use curl, wget, [Postman](https://www.getpostman.com/apps) or any similar tool with your unique **IntoPerf API key**.
 
 **[Prework]** Use [GET /v1/players](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/players/get) and [GET /v1/eventtypes](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/eventtypes/get) responses to create a map between IntoPerf IDs and your IDs.
 
