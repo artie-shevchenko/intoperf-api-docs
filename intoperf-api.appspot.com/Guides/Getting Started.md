@@ -66,7 +66,7 @@ Response:
     m24
     ```
 
-1.  **Push several performance events**. Push `Submaximal speed portion` values for the first complete aligned 10-second period [1371945620000, 1371945610000) for several players.
+1.  **Push several performance events**. Push `Submaximal speed portion` values for the first complete aligned 10-second period [1371945620000, 1371945610000) and the next one for several players.
 
     Make [POST /v1/matches/m24/perfevents](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/perfevents/post) requests with:
 
@@ -80,6 +80,14 @@ Response:
     
     ```
     eventTypeId=13
+    playerId=156
+    value=0.22
+    eventTimestampMillis=1371945630000
+    key=YOUR_API_KEY
+    ```
+    
+    ```
+    eventTypeId=13
     playerId=153
     value=0.42
     eventTimestampMillis=1371945620000
@@ -88,8 +96,16 @@ Response:
     
     ```
     eventTypeId=13
-    playerId=174
-    value=0.27
+    playerId=153
+    value=0.45
+    eventTimestampMillis=1371945630000
+    key=YOUR_API_KEY
+    ```
+    
+    ```
+    eventTypeId=13
+    playerId=163
+    value=0.21
     eventTimestampMillis=1371945620000
     key=YOUR_API_KEY
     ```
@@ -97,8 +113,8 @@ Response:
     ```
     eventTypeId=13
     playerId=163
-    value=0.21
-    eventTimestampMillis=1371945620000
+    value=0.20
+    eventTimestampMillis=1371945630000
     key=YOUR_API_KEY
     ```
 
@@ -158,6 +174,6 @@ Response:
     key=YOUR_API_KEY
     ```
 
-That’s it! The `Submaximal speed portion` data you just uploaded can be analyzed now at [https://apidemo.intoperf.com](https://apidemo.intoperf.com).
+That’s it! The data you just uploaded can be analyzed now at [https://apidemo.intoperf.com](https://apidemo.intoperf.com) - just search for `Submaximal speed portion` data in CSKA Moscow-FK Krasnodar (2013-06-23) match.
 
 **Note:** For other teams/players you would need to upload 3 matches first for data to show up at [https://apidemo.intoperf.com](https://apidemo.intoperf.com).
