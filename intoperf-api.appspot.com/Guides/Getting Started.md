@@ -90,6 +90,8 @@ Response:
     key=YOUR_API_KEY
     ```
     
+    And another one with:
+    
     ```
     eventTypeIds=13,13,13,13
     playerIds=172,172,175,175
