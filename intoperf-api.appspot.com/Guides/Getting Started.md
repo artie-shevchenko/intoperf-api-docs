@@ -79,7 +79,7 @@ Response:
     key=YOUR_API_KEY
     ```
     
-    Actually let's use batch API instead to do more with less API requests. Make [POST /v1/matches/m24/quantitativePerfEvents:batchCreate](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/quantitativePerfEvents:batchCreate/post) request with:
+    Actually let's use batch API instead to do more with less API requests. And let's use longer intervals (in production you never want to use such intervals). Make [POST /v1/matches/m24/quantitativePerfEvents:batchCreate](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/quantitativePerfEvents:batchCreate/post) request with:
     
     ```
     eventTypeIds=13,13,13,13,13,13
@@ -101,8 +101,6 @@ Response:
     key=YOUR_API_KEY
     ```
     
-    
-
 1.  **Push a substitution.**
 
     Make [POST /v1/matches/m24/player_out](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:player_out/post) request with:
