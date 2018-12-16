@@ -79,26 +79,24 @@ Response:
     key=YOUR_API_KEY
     ```
     
-    Actually let's use batch API instead to do more with less API requests. And let's use longer intervals (in production you never want to use such intervals). Make [POST /v1/matches/m24/quantitativePerfEvents:batchCreate](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/quantitativePerfEvents:batchCreate/post) request with:
+    Actually let's use batch API instead to do more with less API requests. And let's use longer intervals (in production you never want to use such intervals). Make [POST /v1/matches/m24/quantitativePerfEvents:batchCreate](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/quantitativePerfEvents:batchCreate/post) request with ```application/x-www-form-urlencoded```:
     
     ```
     eventTypeIds=13,13,13,13,13,13
     playerIds=156,156,153,153,163,163
-    value=0.2,0.3,0.4,0.4,0.5,0.6
+    values=0.2,0.3,0.4,0.4,0.5,0.6
     intervalStartTimestampsMillis=1371945620000,371947000000,1371945620000,371947000000,1371945620000,1371947000000
     intervalFinishTimestampsMillis=1371947000000,1371947500000,1371947000000,1371947500000,1371947000000,1371947500000
-    key=YOUR_API_KEY
     ```
     
-    And another one with:
+    Don't forget setting ```key=YOUR_API_KEY``` in these requests too. Make another [POST /v1/matches/m24/quantitativePerfEvents:batchCreate](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/quantitativePerfEvents:batchCreate/post) request with ```application/x-www-form-urlencoded```:
     
     ```
     eventTypeIds=13,13,13,13
     playerIds=172,172,175,175
-    value=0.5,0.5,0.2,0.4
+    values=0.5,0.5,0.2,0.4
     intervalStartTimestampsMillis=1371945620000,1371947000000,1371945620000,1371947000000
     intervalFinishTimestampsMillis=1371947000000,1371947500000,1371947000000,1371947500000
-    key=YOUR_API_KEY
     ```
     
 1.  **Push a substitution.**
