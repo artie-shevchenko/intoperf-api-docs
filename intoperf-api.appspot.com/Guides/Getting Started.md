@@ -68,57 +68,27 @@ Response:
 
 1.  **Push several performance events**. Push `Submaximal speed portion` values for the first complete aligned 10-second period [1371945620000, 1371945610000) and the next one for several players.
 
-    Make [POST /v1/matches/m24/perfevents](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/perfevents/post) requests with:
+    Make [POST /v1/matches/m24/quantitativePerfEvents](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/quantitativePerfEvents/post) request with:
 
     ```
     eventTypeId=13
     playerId=156
-    value=0.24
-    eventTimestampMillis=1371945620000
+    value=0.12
+    intervalStartTimestampMillis=1371945620000
+    intervalFinishTimestampMillis=1371945670000
     key=YOUR_API_KEY
     ```
     
-    ```
-    eventTypeId=13
-    playerId=156
-    value=0.22
-    eventTimestampMillis=1371945630000
-    key=YOUR_API_KEY
-    ```
+    Actually let's use batch API instead to do more with less API requests. Make [POST /v1/matches/m24/quantitativePerfEvents:batchCreate](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/quantitativePerfEvents:batchCreate/post) request with:
     
     ```
-    eventTypeId=13
-    playerId=153
-    value=0.42
-    eventTimestampMillis=1371945620000
+    eventTypeIds=13,13,13,13,13,13
+    playerIds=156,156,153,153,163,163
+    value=0.24,0.31,0.45,0.41,0.52,0.55
+    intervalStartTimestampsMillis=1371945620000,1371945620000,1371945620000,1371947000000,1371947000000,1371947000000
+    intervalFinishTimestampsMillis=1371947000000,1371947000000,1371947000000,1371947500000,1371947500000,1371947500000
     key=YOUR_API_KEY
     ```
-    
-    ```
-    eventTypeId=13
-    playerId=153
-    value=0.45
-    eventTimestampMillis=1371945630000
-    key=YOUR_API_KEY
-    ```
-    
-    ```
-    eventTypeId=13
-    playerId=163
-    value=0.21
-    eventTimestampMillis=1371945620000
-    key=YOUR_API_KEY
-    ```
-
-    ```
-    eventTypeId=13
-    playerId=163
-    value=0.20
-    eventTimestampMillis=1371945630000
-    key=YOUR_API_KEY
-    ```
-
-    ... Push more events ...
 
 1.  **Push a substitution.**
 
