@@ -10,11 +10,11 @@ Make sure you have your unique **IntoPerf API key**. If you don't or you get aut
 * Don't use HTTP, use HTTPS instead.
 * Each request to IntoPerf API should have a ```key``` query parameter. For example: ```https://api.intoperf.com/v1/players?key=YOUR_API_KEY```
 
-The usage example below is a good introduction to IntoPerf API. To find more examples of what you can do with this API and how to use it, visit the reference section of this site. You can use the **Try this API** tool on the right side of every API reference page to generate a sample request.
+The example below is a good introduction to IntoPerf API. To find more examples of what you can do with this API and how to use it, visit the reference section of this site. You can use the **Try this API** tool on the right side of every API reference page to generate a sample request.
 
 **Note:**  IntoPerf Data Navigator and Reports will do player's performance assessment only if there are at least 3 matches imported for that player. Otherwise, that player will not even be listed in the Unit select box.
 
-## Usage example
+## Example
 
 Let’s import a match between CSKA Moscow and FK Krasnodar (2013/06/23) with ```Submaximal speed portion``` data for FK Krasnodar (see [GET /v1/teams](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/teams/get) response to find the correct team IDs).
 
