@@ -66,7 +66,9 @@ Response:
     m24
     ```
 
-1.  **Push several performance events**. Push `Submaximal speed portion` value for the 10000-millis-aligned interval [1371945620000, 1371945670000). Make [POST /v1/matches/m24/quantitativePerfEvents](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/quantitativePerfEvents/post) request with:
+1.  **Push several performance events**.
+
+    Push `Submaximal speed portion` value for the 10000-millis-aligned interval [1371945620000, 1371945670000). Make [POST /v1/matches/m24/quantitativePerfEvents](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/quantitativePerfEvents/post) request with:
 
     ```
     eventTypeId=13
@@ -82,11 +84,22 @@ Response:
     ```
     eventTypeIds=13,13,13,13,13,13
     playerIds=156,156,153,153,163,163
-    value=0.24,0.31,0.45,0.41,0.52,0.55
-    intervalStartTimestampsMillis=1371945620000,1371945620000,1371945620000,1371947000000,1371947000000,1371947000000
-    intervalFinishTimestampsMillis=1371947000000,1371947000000,1371947000000,1371947500000,1371947500000,1371947500000
+    value=0.2,0.3,0.4,0.4,0.5,0.6
+    intervalStartTimestampsMillis=1371945620000,371947000000,1371945620000,371947000000,1371945620000,1371947000000
+    intervalFinishTimestampsMillis=1371947000000,1371947500000,1371947000000,1371947500000,1371947000000,1371947500000
     key=YOUR_API_KEY
     ```
+    
+    ```
+    eventTypeIds=13,13,13,13
+    playerIds=172,172,175,175
+    value=0.5,0.5,0.2,0.4
+    intervalStartTimestampsMillis=1371945620000,1371947000000,1371945620000,1371947000000
+    intervalFinishTimestampsMillis=1371947000000,1371947500000,1371947000000,1371947500000
+    key=YOUR_API_KEY
+    ```
+    
+    
 
 1.  **Push a substitution.**
 
@@ -142,11 +155,11 @@ Response:
     key=YOUR_API_KEY
     ```
 
-That’s it! The data you just uploaded can be analyzed now at [https://apidemo.intoperf.com](https://apidemo.intoperf.com):
+That’s it! The data you just uploaded can now be analyzed at [https://apidemo.intoperf.com](https://apidemo.intoperf.com):
 
 1.  Go to [https://apidemo.intoperf.com](https://apidemo.intoperf.com).
 1.  Choose `Team in match` context type.
-1.  Choose `CSKA Moscow-FK Krasnodar (2013-06-23)` match.
+1.  Choose `FK Krasnodar in CSKA Moscow-FK Krasnodar (2013-06-23) match`.
 1.  [Optional] Select `1st half` as a period.
 1.  Click `Search`.
 1.  Click `Search with no filters`.
