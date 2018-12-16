@@ -66,9 +66,7 @@ Response:
     m24
     ```
 
-1.  **Push several performance events**. Push `Submaximal speed portion` values for the first complete aligned 10-second period [1371945620000, 1371945610000) and the next one for several players.
-
-    Make [POST /v1/matches/m24/quantitativePerfEvents](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/quantitativePerfEvents/post) request with:
+1.  **Push several performance events**. Push `Submaximal speed portion` value for the 10000-millis-aligned interval [1371945620000, 1371945670000). Make [POST /v1/matches/m24/quantitativePerfEvents](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/quantitativePerfEvents/post) request with:
 
     ```
     eventTypeId=13
