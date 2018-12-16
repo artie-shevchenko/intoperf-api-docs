@@ -79,7 +79,7 @@ Response:
     key=YOUR_API_KEY
     ```
     
-    Actually let's use batch API instead to do more with less API requests. And let's use longer intervals (in production you never want to use such intervals). Make [POST /v1/matches/m24/quantitativePerfEvents:batchCreate](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/quantitativePerfEvents:batchCreate/post) request with ```application/x-www-form-urlencoded```:
+    Actually let's use batch API instead to do more with less API requests. And let's use longer intervals (in production you never want to use such intervals). Make [POST /v1/matches/m24/quantitativePerfEvents:batchCreate](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/quantitativePerfEvents:batchCreate/post) request with ```application/x-www-form-urlencoded``` form data:
     
     ```
     eventTypeIds=13,13,13,13,13,13
@@ -89,7 +89,7 @@ Response:
     intervalFinishTimestampsMillis=1371947000000,1371947500000,1371947000000,1371947500000,1371947000000,1371947500000
     ```
     
-    Don't forget setting ```key=YOUR_API_KEY``` in these requests too. Make another [POST /v1/matches/m24/quantitativePerfEvents:batchCreate](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/quantitativePerfEvents:batchCreate/post) request with ```application/x-www-form-urlencoded```:
+    Don't forget setting ```key=YOUR_API_KEY``` in these requests too. Make another [POST /v1/matches/m24/quantitativePerfEvents:batchCreate](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/quantitativePerfEvents:batchCreate/post) request with ```application/x-www-form-urlencoded``` form data:
     
     ```
     eventTypeIds=13,13,13,13
@@ -160,8 +160,8 @@ That’s it! The data you just uploaded can now be analyzed at [https://apidemo.
 1.  Choose `FK Krasnodar in CSKA Moscow-FK Krasnodar (2013-06-23) match`.
 1.  [Optional] Select `1st half` as a period.
 1.  Click `Search`.
-1.  Click `Search with no filters`.
+1.  Set filters to 0 to see more players.
 
-That's a tiny amount of data we just uploaded so confidence level is ~0%. Next step is to upload data for 10-20 matches and take a look how IntoPerf's intelligence helps you organize and understand your data.
+Next step is to upload some real data for 10-20 matches and take a look how IntoPerf can help organize and understand your data.
 
-**Note:** For other teams/players you would need to upload at least 3 matches first for data to show up at [https://apidemo.intoperf.com](https://apidemo.intoperf.com).
+**Note:** For different teams/players you would need to upload at least 3 matches first for data to show up at [https://apidemo.intoperf.com](https://apidemo.intoperf.com).
