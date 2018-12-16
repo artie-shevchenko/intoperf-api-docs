@@ -3,18 +3,18 @@
 
 ## Before you begin
 
-Make sure you have your unique **IntoPerf API key**. If you don't or you get authentication errors when using it please contact ```admin@intoperf.com``` and we will provide you with a new API key.
+Make sure you have your unique **IntoPerf API key**. If you don't or you get authentication errors when using it please contact ```admin@intoperf.com``` to get a new API key.
 
 ## Using the API
 
 * Don't use HTTP, use HTTPS instead.
-* Each request to IntoPerf API should have a ```key``` parameter. For example: ```https://api.intoperf.com/v1/players?key=YOUR_API_KEY```
+* Each request to IntoPerf API should have a ```key``` query parameter. For example: ```https://api.intoperf.com/v1/players?key=YOUR_API_KEY```
 
-The sample below is a good overview of the API. To find more examples of what you can do with this API and how to use it, visit the reference section of this site. You can use the **Try this API** tool on the right side of every API reference page to generate a sample request.
+The usage example below is a good introduction to IntoPerf API. To find more examples of what you can do with this API and how to use it, visit the reference section of this site. You can use the **Try this API** tool on the right side of every API reference page to generate a sample request.
 
-**Note:**  IntoPerf Data Navigator and Reports will only do a player's performance assessment if there are at least 3 matches imported for that player. Otherwise, that player will not even be listed in select boxes.
+**Note:**  IntoPerf Data Navigator and Reports will do player's performance assessment only if there are at least 3 matches imported for that player. Otherwise, that player will not even be listed in the Unit select box.
 
-## Sample
+## Usage example
 
 Let’s import a match between CSKA Moscow and FK Krasnodar (2013/06/23) with ```Submaximal speed portion``` data for FK Krasnodar (see [GET /v1/teams](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/teams/get) response to find the correct team IDs).
 
@@ -22,7 +22,7 @@ Let’s import a match between CSKA Moscow and FK Krasnodar (2013/06/23) with ``
 
 **[Prework]** Use [GET /v1/players](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/players/get) and [GET /v1/eventtypes](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/eventtypes/get) responses to create a map between IntoPerf IDs and your IDs.
 
-**[Prework]** Make [GET /v1/eventtypes](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/eventtypes/get) request and remember ```reportPeriodMillis``` for every periodic event type used (in this example it's 10000 milliseconds for ```Submaximal speed portion```):
+**[Prework]** Make [GET /v1/eventtypes](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/eventtypes/get) request and remember ```reportPeriodMillis``` for every quantitative event type used (in this example it's 10000 milliseconds for ```Submaximal speed portion```):
 
 Response:
 
