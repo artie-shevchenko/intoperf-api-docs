@@ -132,8 +132,6 @@ Response:
     periodStartTimestampMillis=1371948420000
     ```
     
-    ...
-    
 1.  **Start the second half** (and finish the break after the first half).
 
     Make [POST /v1/matches/{matchId}:start_next_period?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:start_next_period/post) request with parameters:
@@ -142,8 +140,6 @@ Response:
     nextPeriodCode=second
     periodStartTimestampMillis=1371949260000
     ```
-    
-    ...
     
 1.  **Finish the match.**
 
@@ -162,6 +158,6 @@ That’s it! The data you just uploaded can now be analyzed at [https://apidemo.
 1.  Click `Search`.
 1.  Set filters to 0 to see more players.
 
-Next step is to upload some real data for 10-20 matches and take a look how IntoPerf can help organize and understand your data.
+Next step is to upload some real data for 10-20 matches and take a look how IntoPerf can help you organize and understand your data.
 
 **Note:** For different teams/players you would need to upload at least 3 matches first for data to show up at [https://apidemo.intoperf.com](https://apidemo.intoperf.com).
