@@ -96,7 +96,7 @@ Response:
     intervalFinishTimestampsMillis=1371947000000,1371947500000,1371947000000,1371947500000,1371947000000,1371947500000
     ```
     
-    Don't forget setting ```key=YOUR_API_KEY``` in these requests too. Make another [POST /v1/matches/{matchId}/quantitativePerfEvents:batchCreate](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/quantitativePerfEvents:batchCreate/post) request with ```application/x-www-form-urlencoded``` form data:
+    Don't forget setting ```key=YOUR_API_KEY``` query parameter in these requests too. Make another [POST /v1/matches/{matchId}/quantitativePerfEvents:batchCreate](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/quantitativePerfEvents:batchCreate/post) request with ```application/x-www-form-urlencoded``` form data:
     
     ```
     eventTypeIds=13,13,13,13
