@@ -8,7 +8,7 @@ Make sure you have your unique **IntoPerf API key**. If you don't or you get aut
 ## Using the API
 
 * Don't use HTTP, use HTTPS instead.
-* Each request to IntoPerf API should have a ```key``` query parameter. For example: ```https://api.intoperf.com/v1/players?key=YOUR_API_KEY```
+* Each request to IntoPerf API should have a ```key``` **query parameter**. For example: ```https://api.intoperf.com/v1/players?key=YOUR_API_KEY```
 
 The example below is a good introduction to IntoPerf API. To find more examples of what you can do with this API and how to use it, visit the reference section of this site. You can use the **Try this API** tool on the right side of every API reference page to generate a sample request.
 
@@ -59,6 +59,8 @@ Response:
     realTime=true
     key=YOUR_API_KEY
     ```
+
+    NOTE: Please note that **```key``` is a query parameter**. Here and in every request.
     
     Response:
     
@@ -96,7 +98,7 @@ Response:
     intervalFinishTimestampsMillis=1371947000000,1371947500000,1371947000000,1371947500000,1371947000000,1371947500000
     ```
     
-    Don't forget setting ```key=YOUR_API_KEY``` query parameter in these requests too. Make another [POST /v1/matches/{matchId}/quantitativePerfEvents:batchCreate](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/quantitativePerfEvents:batchCreate/post) request with ```application/x-www-form-urlencoded``` form data:
+    Don't forget setting ```key=YOUR_API_KEY``` **query** parameter in these requests too. Make another [POST /v1/matches/{matchId}/quantitativePerfEvents:batchCreate](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/quantitativePerfEvents:batchCreate/post) request with ```application/x-www-form-urlencoded``` form data:
     
     ```
     eventTypeIds=13,13,13,13
