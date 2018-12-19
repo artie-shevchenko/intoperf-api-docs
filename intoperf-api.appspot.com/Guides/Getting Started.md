@@ -20,9 +20,9 @@ Let’s import a match between CSKA Moscow and FK Krasnodar (2013/06/23) with ``
 
 **Note:** to see pushed data at [https://apidemo.intoperf.com](https://apidemo.intoperf.com) don't use **Try this API** tool. Instead use curl, wget, [Postman](https://www.getpostman.com/apps) or any similar tool with your unique **IntoPerf API key**.
 
-**[Prework]** Use [GET /v1/players](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/players/get) and [GET /v1/eventtypes](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/eventtypes/get) responses to create a map between IntoPerf IDs and your IDs.
+**[Prework]** Use [GET /v1/players?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/players/get) and [GET /v1/eventtypes?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/eventtypes/get) responses to create a map between IntoPerf IDs and your IDs.
 
-**[Prework]** Make [GET /v1/eventtypes](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/eventtypes/get) request and remember ```reportPeriodMillis``` for every quantitative event type used (in this example it's 10000 milliseconds for ```Submaximal speed portion```):
+**[Prework]** Make [GET /v1/eventtypes?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/eventtypes/get) request and remember ```reportPeriodMillis``` for every quantitative event type used (in this example it's 10000 milliseconds for ```Submaximal speed portion```):
 
 Response:
 
@@ -47,7 +47,7 @@ Response:
 
 1.  **Start a match.**
 
-    Make [POST /v1/matches](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/post) request with:
+    Make [POST /v1/matches?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/post) request with parameters:
 
     ```
     localTeamId=65
@@ -57,10 +57,7 @@ Response:
     visitingTeamLineup=156,153,174,163,159,165,168,172,175,176
     visitingTeamLineupShirtNumbers=17,5,3,7,19,4,2,9,11,10
     realTime=true
-    key=YOUR_API_KEY
     ```
-
-    NOTE: Please note that **```key``` is a query parameter**. Here and in every request.
     
     Response:
     
@@ -77,7 +74,7 @@ Response:
 
 1.  **Push several performance events**.
 
-    Push `Submaximal speed portion` value for the 10000-millis-aligned interval [1371945620000, 1371945670000). Make [POST /v1/matches/{matchId}/quantitativePerfEvents](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/quantitativePerfEvents/post) request with:
+    Push `Submaximal speed portion` value for the 10000-millis-aligned interval [1371945620000, 1371945670000). Make [POST /v1/matches/{matchId}/quantitativePerfEvents?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/quantitativePerfEvents/post) request with parameters:
 
     ```
     eventTypeId=13
@@ -85,10 +82,9 @@ Response:
     value=0.12
     intervalStartTimestampMillis=1371945620000
     intervalFinishTimestampMillis=1371945670000
-    key=YOUR_API_KEY
     ```
     
-    Actually let's use batch API instead to do more with less API requests. And let's use longer intervals (in production you never want to use such intervals). Make [POST /v1/matches/{matchId}/quantitativePerfEvents:batchCreate](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/quantitativePerfEvents:batchCreate/post) request with ```application/x-www-form-urlencoded``` form data:
+    Actually let's use batch API instead to do more with less API requests. And let's use longer intervals (in production you never want to use such intervals). Make [POST /v1/matches/{matchId}/quantitativePerfEvents:batchCreate?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/quantitativePerfEvents:batchCreate/post) request with parameters:
     
     ```
     eventTypeIds=13,13,13,13,13,13
@@ -98,7 +94,7 @@ Response:
     intervalFinishTimestampsMillis=1371947000000,1371947500000,1371947000000,1371947500000,1371947000000,1371947500000
     ```
     
-    Don't forget setting ```key=YOUR_API_KEY``` **query** parameter in these requests too. Make another [POST /v1/matches/{matchId}/quantitativePerfEvents:batchCreate](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/quantitativePerfEvents:batchCreate/post) request with ```application/x-www-form-urlencoded``` form data:
+    Make another [POST /v1/matches/{matchId}/quantitativePerfEvents:batchCreate?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/quantitativePerfEvents:batchCreate/post) request with parameters:
     
     ```
     eventTypeIds=13,13,13,13
@@ -110,56 +106,51 @@ Response:
     
 1.  **Push a substitution.**
 
-    Make [POST /v1/matches/{matchId}/player_out](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:player_out/post) request with:
+    Make [POST /v1/matches/{matchId}/player_out?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:player_out/post) request with parameters:
     
     ```
     playerId=156
     playerOutTimestampMillis=1371947400000
-    key=YOUR_API_KEY
     ```
     
-    Make [POST /v1/matches/{matchId}/player_in](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:player_in/post) request with:
+    Make [POST /v1/matches/{matchId}/player_in?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:player_in/post) request with parameters:
     
     ```
     teamId=149
     playerId=178
     playerInTimestampMillis=1371947400000
     shirtNumber=10
-    key=YOUR_API_KEY
     
     ```
 
 1.  **Finish the first half** (and start the break after the first half).
     
-    Make [POST /v1/matches/{matchId}:start_next_period](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:start_next_period/post) request with:
+    Make [POST /v1/matches/{matchId}:start_next_period?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:start_next_period/post) request with parameters:
     
     ```
     nextPeriodCode=break-after-first
     periodStartTimestampMillis=1371948420000
-    key=YOUR_API_KEY
     ```
     
     ...
     
 1.  **Start the second half** (and finish the break after the first half).
 
-    Make [POST /v1/matches/{matchId}:start_next_period](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:start_next_period/post) request with:
+    Make [POST /v1/matches/{matchId}:start_next_period?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:start_next_period/post) request with parameters:
     
     ```
     nextPeriodCode=second
     periodStartTimestampMillis=1371949260000
-    key=YOUR_API_KEY
     ```
     
     ...
     
 1.  **Finish the match.**
 
-    Make [POST /v1/matches/{matchId}:finish](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:finish/post) request with:
+    Make [POST /v1/matches/{matchId}:finish?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:finish/post) request with parameter:
     
     ```
     finishTimestampMillis=1371952200000
-    key=YOUR_API_KEY
     ```
 
 That’s it! The data you just uploaded can now be analyzed at [https://apidemo.intoperf.com](https://apidemo.intoperf.com):
