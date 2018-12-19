@@ -75,7 +75,7 @@ Response:
 
 1.  **Push several performance events**.
 
-    Push `Submaximal speed portion` value for the 10000-millis-aligned interval [1371945620000, 1371945670000). Make [POST /v1/matches/sR1J5K/quantitativePerfEvents](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/quantitativePerfEvents/post) request with:
+    Push `Submaximal speed portion` value for the 10000-millis-aligned interval [1371945620000, 1371945670000). Make [POST /v1/matches/{matchId}/quantitativePerfEvents](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/quantitativePerfEvents/post) request with:
 
     ```
     eventTypeId=13
@@ -86,7 +86,7 @@ Response:
     key=YOUR_API_KEY
     ```
     
-    Actually let's use batch API instead to do more with less API requests. And let's use longer intervals (in production you never want to use such intervals). Make [POST /v1/matches/sR1J5K/quantitativePerfEvents:batchCreate](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/quantitativePerfEvents:batchCreate/post) request with ```application/x-www-form-urlencoded``` form data:
+    Actually let's use batch API instead to do more with less API requests. And let's use longer intervals (in production you never want to use such intervals). Make [POST /v1/matches/{matchId}/quantitativePerfEvents:batchCreate](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/quantitativePerfEvents:batchCreate/post) request with ```application/x-www-form-urlencoded``` form data:
     
     ```
     eventTypeIds=13,13,13,13,13,13
@@ -96,7 +96,7 @@ Response:
     intervalFinishTimestampsMillis=1371947000000,1371947500000,1371947000000,1371947500000,1371947000000,1371947500000
     ```
     
-    Don't forget setting ```key=YOUR_API_KEY``` in these requests too. Make another [POST /v1/matches/sR1J5K/quantitativePerfEvents:batchCreate](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/quantitativePerfEvents:batchCreate/post) request with ```application/x-www-form-urlencoded``` form data:
+    Don't forget setting ```key=YOUR_API_KEY``` in these requests too. Make another [POST /v1/matches/{matchId}/quantitativePerfEvents:batchCreate](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D/quantitativePerfEvents:batchCreate/post) request with ```application/x-www-form-urlencoded``` form data:
     
     ```
     eventTypeIds=13,13,13,13
@@ -108,7 +108,7 @@ Response:
     
 1.  **Push a substitution.**
 
-    Make [POST /v1/matches/sR1J5K/player_out](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:player_out/post) request with:
+    Make [POST /v1/matches/{matchId}/player_out](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:player_out/post) request with:
     
     ```
     playerId=156
@@ -116,7 +116,7 @@ Response:
     key=YOUR_API_KEY
     ```
     
-    Make [POST /v1/matches/sR1J5K/player_in](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:player_in/post) request with:
+    Make [POST /v1/matches/{matchId}/player_in](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:player_in/post) request with:
     
     ```
     teamId=149
@@ -129,7 +129,7 @@ Response:
 
 1.  **Finish the first half** (and start the break after the first half).
     
-    Make [POST /v1/matches/sR1J5K:start_next_period](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:start_next_period/post) request with:
+    Make [POST /v1/matches/{matchId}:start_next_period](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:start_next_period/post) request with:
     
     ```
     nextPeriodCode=break-after-first
@@ -141,7 +141,7 @@ Response:
     
 1.  **Start the second half** (and finish the break after the first half).
 
-    Make [POST /v1/matches/sR1J5K:start_next_period](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:start_next_period/post) request with:
+    Make [POST /v1/matches/{matchId}:start_next_period](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:start_next_period/post) request with:
     
     ```
     nextPeriodCode=second
@@ -153,7 +153,7 @@ Response:
     
 1.  **Finish the match.**
 
-    Make [POST /v1/matches/sR1J5K:finish](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:finish/post) request with:
+    Make [POST /v1/matches/{matchId}:finish](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:finish/post) request with:
     
     ```
     finishTimestampMillis=1371952200000
