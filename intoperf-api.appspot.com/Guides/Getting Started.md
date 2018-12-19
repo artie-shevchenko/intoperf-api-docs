@@ -60,7 +60,7 @@ Response:
     key=YOUR_API_KEY
     ```
     
-    Response (**```matchId``` will be different for you**):
+    Response:
     
     ```
     {
@@ -71,7 +71,7 @@ Response:
     }
     ```
     
-    IMPORTANT: Remember ```matchId``` returned, because **you will need it later on**.
+    IMPORTANT: Remember ```matchId``` returned, because you will need to replace ```{matchId}``` with it in next requests.
 
 1.  **Push several performance events**.
 
