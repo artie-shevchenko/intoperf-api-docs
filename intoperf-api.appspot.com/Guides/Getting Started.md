@@ -36,13 +36,8 @@ Response:
 
 ```
 [
-  {
-    "id": 12,
-    "name": "Shot",
-    "description": "Shots accuracy.",
-    "type": "quality",
-    "reportPeriodMillis": 0
-  },
+  ...
+  
   {
     "id": 13,
     "name": "Submaximal speed portion [fake]",
@@ -50,6 +45,8 @@ Response:
     "type": "quantity",
     "reportPeriodMillis": 10000
   },
+  
+  ...
 ]
 ```
 
