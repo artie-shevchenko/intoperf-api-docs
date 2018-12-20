@@ -10,20 +10,21 @@ Make sure you have your unique **IntoPerf API key**. If you don't or you get aut
 * Don't use HTTP, use HTTPS instead.
 * Each request to IntoPerf API should have a ```key``` **query parameter**. For example: ```https://api.intoperf.com/v1/players?key=YOUR_API_KEY```
 
-The example below is a good introduction to IntoPerf API. To find more examples of what you can do with this API and how to use it, visit the reference section of this site. You can use the **Try this API** tool on the right side of every API reference page to generate a sample request.
+The example below is a good introduction to IntoPerf API. To find more examples of what you can do with this API and how to use it, visit the reference section of this site.
 
-**Note:**  IntoPerf Data Navigator and Reports will do player's performance assessment only if there are at least 3 matches imported for that player. Otherwise, that player will not even be listed in the Unit select box.
+**Note:**  IntoPerf Data Navigator and Reports will do player/team's performance assessment only if there are at least 3 matches imported for that player/team. Otherwise, it will not even appear in the lists.
 
 ## Example
 
 Let’s import a match between CSKA Moscow and FK Krasnodar (2013/06/23) with ```Submaximal speed portion``` data for FK Krasnodar (see [GET /v1/teams](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/teams/get) response to find the correct team IDs).
 
-**Note:** to see pushed data at [https://apidemo.intoperf.com](https://apidemo.intoperf.com) **don't** use **Try this API** tool. Instead use curl, wget, [Postman](https://www.getpostman.com/apps) or any similar tool with your unique **IntoPerf API key**.
+**Note:** to see pushed data at [https://apidemo.intoperf.com](https://apidemo.intoperf.com) use curl, wget, [Postman](https://www.getpostman.com/apps) or any similar tool to send HTTP requests with your unique **IntoPerf API key**.
 
 **[Prework]** Create a mapping between your IDs and IntoPerf IDs. Either reuse existing:
 * [GET /v1/teams?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/teams/get)
 * [GET /v1/players?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/players/get)
 * [GET /v1/eventtypes?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/eventtypes/get).
+
 Or create new:
 * [POST /v1/teams?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/teams/post).
 * [POST /v1/players?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/players/post).
