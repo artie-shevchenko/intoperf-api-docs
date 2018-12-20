@@ -16,7 +16,7 @@ The example below is a good introduction to IntoPerf API. To find more examples 
 
 ## Example
 
-Let’s import a match between CSKA Moscow and FK Krasnodar (2013/06/23) with ```Submaximal speed portion``` data for FK Krasnodar (see [GET /v1/teams](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/teams/get) response to find the correct team IDs).
+Let’s import a match between CSKA Moscow and FK Krasnodar (2013/06/23) with ```Submaximal speed portion``` data for FK Krasnodar.
 
 **Note:** to see pushed data at [https://apidemo.intoperf.com](https://apidemo.intoperf.com) use curl, wget, [Postman](https://www.getpostman.com/apps) or any similar tool to send HTTP requests with your unique **IntoPerf API key**.
 
