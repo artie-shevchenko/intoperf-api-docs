@@ -18,9 +18,16 @@ The example below is a good introduction to IntoPerf API. To find more examples 
 
 Let’s import a match between CSKA Moscow and FK Krasnodar (2013/06/23) with ```Submaximal speed portion``` data for FK Krasnodar (see [GET /v1/teams](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/teams/get) response to find the correct team IDs).
 
-**Note:** to see pushed data at [https://apidemo.intoperf.com](https://apidemo.intoperf.com) don't use **Try this API** tool. Instead use curl, wget, [Postman](https://www.getpostman.com/apps) or any similar tool with your unique **IntoPerf API key**.
+**Note:** to see pushed data at [https://apidemo.intoperf.com](https://apidemo.intoperf.com) **don't** use **Try this API** tool. Instead use curl, wget, [Postman](https://www.getpostman.com/apps) or any similar tool with your unique **IntoPerf API key**.
 
-**[Prework]** Create a mapping between your IDs and IntoPerf IDs. Use [GET /v1/teams?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/teams/get), [GET /v1/players?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/players/get) and [GET /v1/eventtypes?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/eventtypes/get). If necessary create [new event types](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/eventtypes/post).
+**[Prework]** Create a mapping between your IDs and IntoPerf IDs. Either reuse existing:
+* [GET /v1/teams?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/teams/get)
+* [GET /v1/players?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/players/get)
+* [GET /v1/eventtypes?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/eventtypes/get).
+Or create new:
+* [POST /v1/teams?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/teams/post).
+* [POST /v1/players?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/players/post).
+* [POST /v1/eventtypes?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/eventtypes/post).
 
 **[Prework]** Make [GET /v1/eventtypes?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/eventtypes/get) request and remember ```reportPeriodMillis``` for every quantitative event type used (in this example it's 10000 milliseconds for ```Submaximal speed portion```):
 
