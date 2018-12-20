@@ -75,7 +75,7 @@ Response:
     }
     ```
     
-    **Important**: Use the ```matchId``` returned to replace ```{matchId}``` in next requests.
+    **Important**: Use the ```matchId``` returned to replace ```{matchId}``` in the following requests.
 
 1.  **Push several performance events**.
 
