@@ -20,7 +20,7 @@ Let’s import a match between CSKA Moscow and FK Krasnodar (2013/06/23) with ``
 
 **Note:** to see pushed data at [https://apidemo.intoperf.com](https://apidemo.intoperf.com) use curl, wget, [Postman](https://www.getpostman.com/apps) or any similar tool to send HTTP requests with your unique **IntoPerf API key**.
 
-**[Prework]** Create a mapping between your IDs and IntoPerf IDs. Either reuse existing:
+**[Prework]** Create a mapping between your IDs and IntoPerf IDs. Either reuse existing entities:
 * [GET /v1/teams?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/teams/get)
 * [GET /v1/players?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/players/get)
 * [GET /v1/eventtypes?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/eventtypes/get).
