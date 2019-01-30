@@ -111,14 +111,14 @@ Response:
     
 1.  **Push a substitution.**
 
-    Make [POST /v1/matches/{matchId}/player_out?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:player_out/post) request with parameters:
+    Make [POST /v1/matches/{matchId}:player_out?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:player_out/post) request with parameters:
     
     ```
     playerId=156
     playerOutTimestampMillis=1371947400000
     ```
     
-    Make [POST /v1/matches/{matchId}/player_in?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:player_in/post) request with parameters:
+    Make [POST /v1/matches/{matchId}:player_in?key=YOUR_API_KEY](https://apidoc.intoperf.com/docs/intoperf-api.appspot.com/1/routes/v1/matches/%7BmatchId%7D:player_in/post) request with parameters:
     
     ```
     teamId=149
